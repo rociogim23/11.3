@@ -2,7 +2,7 @@ let contenedor = document.getElementById("contenedor");
 let boton = document.getElementById("btnBuscar");
 
 async function fetchProducts() {
-    let busqueda = document.getElementById("inputBuscar").value; // Obtén el valor de búsqueda
+    let busqueda = document.getElementById("inputBuscar").value;
     let API_URL = `https://images-api.nasa.gov/search?q=${busqueda}`;
     
     try {
@@ -14,7 +14,7 @@ async function fetchProducts() {
     }
 }
 
-async function displayProducts() {
+async function displayProducts( ) {
     let productos = await fetchProducts();
     contenedor.innerHTML = "";    
     productos.forEach(element => {
